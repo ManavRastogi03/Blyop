@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-import Home from "./component/Home/Home";
+import Home from "./component/User/Home/Home.jsx";
 // import About from "./component/About"; // Example additional page
 
 function App() {
