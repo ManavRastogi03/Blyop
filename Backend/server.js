@@ -3,7 +3,8 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './src/Database/index.js';
 import authRoutes from './src/routes/authRoutes.js';
-import cardRoute from './src/routes/cardRoutes.js'
+import cardRoute from './src/routes/cardRoutes.js';
+import analyticRoutes from './src/routes/analyticRoutes.js';
 dotenv.config();
 connectDB();
 
@@ -22,8 +23,7 @@ app.get('/', (req, res) => {
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/cards',cardRoute)
-
-
+app.use('/api/public', analyticRoutes);
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });

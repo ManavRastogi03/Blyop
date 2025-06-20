@@ -11,7 +11,7 @@ router.put('/:id',authMiddleware,updateCard);
 router.delete("/:id",authMiddleware,deleteCard);
 // Public Card Routes
 router.get("/public/:username",getPublicCard);
-router.post('/public', authMiddleware, createPublicCard);
+router.post('/public', authMiddleware, checkUsernameAvailability,createPublicCard);
 router.patch('/claim-username',authMiddleware,claimUsername);
 router.get('/avail/:username',authMiddleware,checkUsernameAvailability);
 
